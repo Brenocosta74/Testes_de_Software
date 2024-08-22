@@ -8,5 +8,5 @@ describe('Formulário cadastro', () => {
     cy.getByData('email-input').type('ze@email.com')
     cy.getByData('senha-input').type('456789')
     cy.getByData('botao-enviar').click()
-    cy.getByData('mensagem-sucesso').should('exist').and('have-text', 'Usuário cadastrado com sucesso!')
+    cy.getByData('mensagem-sucesso').should('exist').and('have.text', 'Usuário cadastrado com sucesso!')
     }})
