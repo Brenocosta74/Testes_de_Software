@@ -9,9 +9,9 @@ describe('Jornadas de usuário', () => {
     cy.getByData('select-opcoes').select('Transferência') 
     cy.getByData('form-input').type('80') 
     cy.getByData('realiza-transacao').click() 
-    cy.getByData('lista-transacoes').find('li').last().contains('- R$80') 
+    cy.getByData('lista-transacoes').find('li').last().contains('- R$ 80') 
     cy.getByData('botao-sair').click() 
-    cy.getByData('pathname').should('eq','/') 
+    cy.location('pathname').should('eq','/') 
     })
 }) 
 
